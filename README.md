@@ -1,4 +1,3 @@
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
 
 # MachineLearningCampProposal
 This is a proposal project to attend Machine Learning Camp
@@ -17,7 +16,7 @@ Previous works focus on visual attention, the model has a co-attention mechanism
 The parallel co-attention computes the similarity between image and question features at all pairs of image regions and question location simultaneously. Given an image feature map $V = {{v_1},\dots,{v_N}}$ and question representation $Q = {{q_1}, \dots, {v_N}}$, the affinity matrix $\mathcal{C}$ is calculated as follows:
   
 
-$\mathcal{C} = tanh(Q^T\W V)$
+$\mathcal{C} = tanh(Q^T W V)$
  
 
 Then, using the above affinity matrix to compute the attention weights with respect to visual features and textural features using softmax function
