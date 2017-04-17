@@ -21,7 +21,7 @@ The parallel co-attention computes the similarity between image and question fea
 Then, using the above affinity matrix to compute the attention weights with respect to visual features and textural features using softmax function
   H^v =tanh(W_v V + (W_q) Q C)  
   
-  $\alpha^v = softmax(\mathcal{U_v}H^v)$
+  $$\alpha^v = softmax(\mathcal{U_v}H^v)$$
   
   $H^q =tanh(W_q Q + (W_v) Q C^T)$  
   
