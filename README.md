@@ -15,8 +15,11 @@ The key contributions are listed as below:
 Previous works focus on visual attention, the model has a co-attention mechanism to attend both visual and textural information. In this paper, two co-attention mechanisms were proposed including parallel co-attention and alternating co-attention. 
 
 The parallel co-attention computes the similarity between image and question features at all pairs of image regions and question location simultaneously. Given an image feature map $V = {{v_1},\dots,{v_N}}$ and question representation $Q = {{q_1}, \dots, {v_N}}$, the affinity matrix $\mathcal{C}$ is calculated as follows:
-            
-  $$\mathcal{C} = tanh(Q^T\W V)$$
+  
+\begin{equation}
+\mathcal{C} = tanh(Q^T\W V)
+\end{equation}
+ 
 
 Then, using the above affinity matrix to compute the attention weights with respect to visual features and textural features using softmax function
   H^v =tanh(W_v V + (W_q) Q C)  
