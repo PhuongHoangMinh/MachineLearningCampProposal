@@ -1,3 +1,24 @@
+<style TYPE="text/css">
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
 # MachineLearningCampProposal
 This is a proposal project to attend Machine Learning Camp
 
@@ -12,9 +33,9 @@ The key contributions are listed as below:
 ### Co-Attention:
 Previous works focus on visual attention, the model has a co-attention mechanism to attend both visual and textural information. In this paper, two co-attention mechanisms were proposed including parallel co-attention and alternating co-attention. 
 
-The parallel co-attention computes the similarity between image and question features at all pairs of image regions and question location simultaneously. Given an image feature map V = {{v_1},\dots,{v_N}} and question representation $Q = {{q_1}, \dots, {v_N}}$, the affinity matrix $\mathcal{C}$ is calculated as follows:
+The parallel co-attention computes the similarity between image and question features at all pairs of image regions and question location simultaneously. Given an image feature map $V = {{v_1},\dots,{v_N}}$ and question representation $Q = {{q_1}, \dots, {v_N}}$, the affinity matrix $\mathcal{C}$ is calculated as follows:
             
-  \mathcal{C} = tanh(Q^T\W V)
+  $\mathcal{C} = tanh(Q^T\W V)$
 
 Then, using the above affinity matrix to compute the attention weights with respect to visual features and textural features using softmax function
   H^v =tanh(W_v V + (W_q) Q C)  
